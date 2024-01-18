@@ -10,10 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_01_17_030809) do
+ActiveRecord::Schema[7.1].define(version: 2024_01_17_142009) do
+  create_table "postingans", force: :cascade do |t|
+    t.string "judul"
+    t.text "deskripsi"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "postings", force: :cascade do |t|
+    t.string "nama"
+    t.text "deskripsi"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "posts", force: :cascade do |t|
     t.string "title"
-    t.string "content"
+    t.text "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
