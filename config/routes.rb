@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
+  get 'postingan/index'
   get '/index' => 'home#index'
+  get '/postingan' => 'postingan#index'
   get '/artikel'=> 'home#artikel'
   get '/about' =>'home#about'
   get '/' => 'home#index'
