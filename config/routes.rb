@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :users
   get 'post/index'
   get 'postingan/index'
   get '/index' => 'home#index'
